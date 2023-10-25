@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+     header {
+      background-color: #6962be;
+      color: #fff;
+      padding: 10px;
+      text-align:center;
+      height: 80px;
+    }
+    .inner {
+      display: inline-block;
+      margin: 10px;
+      position: relative;
+      padding: 20px;
+      margin-left: 40px;
+    }
+
+    .inner img {
+      width: 400px;
+      height: 400px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .inner:hover img {
+      transform: scale(1.1);
+      opacity: 0.5;
+    }
+
+    .inner::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .inner:hover::before {
+      opacity: 1;
+    }
+
+    .inner a {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: black;
+      font-size: 18px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      text-decoration: none;
+    }
+
+    .inner:hover a {
+      opacity: 1;
+    }
+    .topimg{
+            width:250px ;
+            height: 70px;
+            float:left;
+            border-radius: 15px;
+        }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="home1r/"><img src="https://images.softwaresuggest.com/software_logo/1472796084_onlinexm%20logo.jpg?auto=compress,format" alt="" class="topimg"></a>
+    <h1>CHOOSE THE COURSE HERE!!</h1>
+    
+  </header>
+  <div class="container">
+    <div class="inner">
+      <img src="https://logos-world.net/wp-content/uploads/2021/10/Python-Symbol.png" alt="">
+      <a href="python/">Python Test</a>
+    </div>
+    <div class="inner">
+      <img src="https://media.istockphoto.com/id/868618032/fr/vectoriel/sql-database-icon-design-ui-ou-ux-app.jpg?s=612x612&w=0&k=20&c=Y5CKOiffKtIw32IjOZOsWOP4TfCb6zFCFdoJPjwfux8=" alt="">
+      <a href="sql/">SQL Test</a>
+    </div>
+    <div class="inner">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwNufTd72akt3Ffc6-RYGyEkZrV3IF7IJGwQ&usqp=CAU" alt="">
+      <a href="ml/">Machine Learning Test</a>
+    </div>
+    
+  </div>
+</body>
+</html>
